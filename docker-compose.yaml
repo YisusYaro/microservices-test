@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  server-service:
+  users-service:
     build:
-      context: ./server
+      context: ./users
       dockerfile: ./Dockerfile
-    container_name: server-container
+    container_name: users-container
     ports:
       - '5000:5000'
     environment:

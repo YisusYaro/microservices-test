@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  server-service:
+  users-service:
     build:
-      context: ./server
+      context: ./users
       dockerfile: ./Dockerfile-dev
-    container_name: server-container
+    container_name: users-container
     volumes:
-      - ./server/:/usr/src/app
+      - ./users/:/usr/src/app
     ports:
       - '5000:5000'
     stdin_open: true
