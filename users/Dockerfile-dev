@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY ./ /usr/src/app/
 
-RUN apk add gcc musl-dev
+RUN apk add --update gcc musl-dev libffi-dev
 
 RUN pip install pipenv
 
