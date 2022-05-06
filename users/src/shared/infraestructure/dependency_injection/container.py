@@ -1,8 +1,9 @@
 from dependency_injector import containers, providers
+from shared.infraestructure.tokens.token_service import TokenService
 
 from ..command_bus.command_bus import CommandBus
-from ..query_bus.query_bus import QueryBus
 from ..event_bus.event_bus import EventBus
+from ..query_bus.query_bus import QueryBus
 
 
 class Container(containers.DeclarativeContainer):
@@ -17,4 +18,8 @@ class Container(containers.DeclarativeContainer):
 
     EventBus = providers.Factory(
         EventBus,
+    )
+
+    TokenService = providers.Factory(
+        TokenService
     )
