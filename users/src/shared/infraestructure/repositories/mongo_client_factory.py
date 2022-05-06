@@ -13,5 +13,6 @@ class MongoClientFactory(object):
             database_host=os.environ.get("DATABASE_HOST"),
             database=os.environ.get("DATABASE")
         )
+
         client = MongoClient(CONNECTION_STRING)
-        return client["resources-database"]
+        return client[os.environ.get("DATABASE")]
