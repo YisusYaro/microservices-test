@@ -10,6 +10,8 @@ dependency-injector = "*"
 pymongo = "*"
 dnspython = "*"
 ulid-py = "*"
+bcrypt = "*"
+pyjwt = "*"
 
 [dev-packages]
 
