@@ -14,6 +14,11 @@ def setQueries(container):
         UserLoginHandler,
     )
 
+    from users.application.queries.get_user_handler import GetUserHandler
+    container.GetUserQuery = providers.Factory(
+        GetUserHandler
+    )
+
 
 def setEvents(container):
     from users.application.events.user_registered_handler import UserRegisteredHandler
@@ -40,7 +45,14 @@ def setInfraestructure(container):
     )
 
 
+def setInterface(container):
+    from users.interface.middlewares.get_user_approver import GetUserApprover
+    container.GetUserApprover = providers.Factory(
+        GetUserApprover,
+    )
+
+
 def setUsersModule(container):
     setInfraestructure(container)
+    setInterface(container)
     setApplication(container)
-
