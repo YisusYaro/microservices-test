@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   users-service:
+    image: yisusyaro/users-service:1
     build:
       context: ./users
       dockerfile: ./Dockerfile
