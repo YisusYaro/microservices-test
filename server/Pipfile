@@ -12,6 +12,7 @@ dnspython = "*"
 ulid-py = "*"
 bcrypt = "*"
 pyjwt = "*"
+requests = "*"
 
 [dev-packages]
 
