@@ -1,7 +1,7 @@
 from shared.domain.aggregate_root import AggregateRoot
 
 
-class User(AggregateRoot):
+class Character(AggregateRoot):
     def __init__(self, id, name, image, appearances):
         super().__init__()
         self.__id = id
@@ -9,7 +9,7 @@ class User(AggregateRoot):
         self.__image = image
         self.__appearances = appearances
 
-    def toProperties(self):
+    def to_properties(self):
         return dict(
             id=self.__id,
             name=self.__name,
