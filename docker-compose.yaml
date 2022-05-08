@@ -4,12 +4,31 @@ services:
   users-service:
     image: yisusyaro/users-service:1
     build:
-      context: ./users
+      context: ./server
       dockerfile: ./Dockerfile
     container_name: users-container
     ports:
       - '5000:5000'
     environment:
+      - START=start_users
+      - FRONTEND=http://127.0.0.1:5500
+      - ENV=production
+      - DATABASE=${DATABASE}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - JWT_SECRET=nRuDMYTAZC8muFz4
+
+  characters-and-comics-service:
+    image: yisusyaro/characters-and-comics-service:1
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    container_name: characters-and-comics-container
+    ports:
+      - '5001:5001'
+    environment:
+      - START=start_characters_and_comics
       - FRONTEND=http://127.0.0.1:5500
       - ENV=production
       - DATABASE=${DATABASE}
