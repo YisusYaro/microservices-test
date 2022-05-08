@@ -6,11 +6,11 @@ from flask import Blueprint, request
 from shared.infraestructure.dependency_injection.app import App
 from shared.interface.handle_http_error import handle_http_error
 
-shared_controller = Blueprint("shared_controller", __name__)
+character_controller = Blueprint("character_controller", __name__)
 query_bus = App().container.QueryBus()
 
 
-@shared_controller.route("/searchComics/", methods=["GET"])
+@character_controller.route("/characters/", methods=["GET"])
 @handle_http_error()
 def list_characters_by_criteria():
     raw_filters = request.args.getlist('filters')
