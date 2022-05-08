@@ -38,7 +38,7 @@ class CharacterHttpService(object):
 
         json_result = http_result.json()
 
-        return json_result["data"]["results"], 99
+        return json_result["data"]["results"], json_result["data"]["count"]
 
     def __fetch(self, offset):
         timestamp = self.__get_timestamp()
