@@ -11,7 +11,7 @@ class ListCharactersByCriteriaHandler(object):
         self.character_http_service = character_http_service
 
     def handle(self, query):
-        characters = self.character_http_service.list_characters()
+        characters = self.character_http_service.list_characters_by_criteria(query.filters)
 
         return ListCharactersByCriteriaResult(list(map(self.__character_to_properties, characters)))
 

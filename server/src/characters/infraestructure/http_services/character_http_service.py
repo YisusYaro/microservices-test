@@ -3,17 +3,24 @@ from datetime import datetime
 from hashlib import md5
 
 import requests
+from shared.infraestructure.dependency_injection.app import App
 from characters.domain.factory import Factory
 
 
 class CharacterHttpService(object):
-    def __init__(self):
+    def __init__(self, filter=App().container.Filter()):
+        self.__filter = filter
         self.__public_key = os.environ.get("MARVEL_PUBLIC_KEY")
         self.__private_key = os.environ.get("MARVEL_PRIVATE_KEY")
         self.__path = "https://gateway.marvel.com/v1/public/characters"
         self.__limit_pagination = 100
 
-    def list_characters(self):
+    def list_characters_by_criteria(self, filters):
+        if(len(filters) < 1):
+            return self.__list_characters()
+        return list(filter(lambda character: self.__filter.filter_by_criteria(filters, character), self.__list_characters()))
+
+    def __list_characters(self):
         offset = 0
         results = []
 
@@ -31,7 +38,7 @@ class CharacterHttpService(object):
 
         json_result = http_result.json()
 
-        return json_result["data"]["results"], json_result["data"]["count"]
+        return json_result["data"]["results"], 99
 
     def __fetch(self, offset):
         timestamp = self.__get_timestamp()
