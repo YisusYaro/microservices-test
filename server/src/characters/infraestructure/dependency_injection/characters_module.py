@@ -2,9 +2,9 @@ from dependency_injector import providers
 
 
 def set_queries(container):
-    from characters.application.queries.list_characters_by_criteria_handler import ListCharactersByCriteriaResult
+    from characters.application.queries.list_characters_by_criteria_handler import ListCharactersByCriteriaHandler
     container.ListCharactersByCriteriaQuery = providers.Factory(
-        ListCharactersByCriteriaResult
+        ListCharactersByCriteriaHandler
     )
 
 
