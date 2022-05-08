@@ -1,0 +1,2 @@
+class ForbbidenException(Exception):
+    pass
