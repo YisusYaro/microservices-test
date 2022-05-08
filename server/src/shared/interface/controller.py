@@ -16,12 +16,14 @@ def list_characters_by_criteria():
     raw_filters = request.args.getlist('filters')
 
     formated_filters = map(format_filter, raw_filters)
-    
+
     query = ListCharactersByCriteriaQuery(
         filters=formated_filters,
     )
     result = query_bus.execute(query)
+
     return result.__dict__, 200
+
 
 def format_filter(filter):
     return json.loads(filter)
