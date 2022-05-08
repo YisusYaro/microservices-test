@@ -13,24 +13,24 @@ services:
       - START=start_users
       - FRONTEND=http://127.0.0.1:5500
       - ENV=production
+      - JWT_SECRET=nRuDMYTAZC8muFz4
       - DATABASE=${DATABASE}
       - DATABASE_HOST=${DATABASE_HOST}
       - DATABASE_USER=${DATABASE_USER}
       - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-      - JWT_SECRET=nRuDMYTAZC8muFz4
 
-  characters-and-comics-service:
-    image: yisusyaro/characters-and-comics-service:1
+  characters-service:
+    image: yisusyaro/characters-service:1
     build:
       context: ./server
       dockerfile: ./Dockerfile
-    container_name: characters-and-comics-container
+    container_name: characters-container
     ports:
       - '5001:5001'
     environment:
-      - START=start_characters_and_comics
+      - START=start_characters
       - FRONTEND=http://127.0.0.1:5500
       - ENV=production
+      - JWT_SECRET=nRuDMYTAZC8muFz4
       - MARVEL_PUBLIC_KEY=${MARVEL_PUBLIC_KEY}
       - MARVEL_PRIVATE_KEY=${MARVEL_PRIVATE_KEY}
-      - JWT_SECRET=nRuDMYTAZC8muFz4
