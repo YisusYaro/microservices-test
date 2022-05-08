@@ -1,0 +1,14 @@
+FROM python:3.9-alpine
+
+RUN apk add --update gcc musl-dev libffi-dev
+
+WORKDIR /usr/src/app
+
+COPY ./ /usr/src/app/
+
+RUN pip install pipenv
+
+RUN pipenv install
+
+CMD ["sh", "-c", "pipenv run ${START}"]
+
