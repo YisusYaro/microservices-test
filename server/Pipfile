@@ -22,3 +22,4 @@ python_version = "3.9"
 [scripts]
 start_users = "python src/users.py"
 start_characters = "python src/characters.py"
+start_comics = "python src/comics.py"
