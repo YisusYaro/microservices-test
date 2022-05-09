@@ -1,6 +1,19 @@
-# python-ddd-example
+# Microservices coppel test
 
-Rest api python example using driven domain design and cqrs.
+Microservices coppel test.
+
+Please provide os variables environtment
+
+```
+/docker-compose.yaml
+```
+
+## Deployment
+
+```
+docker-compose pull
+docker-compose up -d
+```
 
 ## Dev enviroment using python 📦
 
@@ -22,6 +35,8 @@ docker exec -it server-container pipenv run start
 ## Open your browser 🚀
 
 [localhost:5000](http://localhost:5000)
+[localhost:5001](http://localhost:5001)
+[localhost:5002](http://localhost:5002)
 
 ## Devs ✒️
 
