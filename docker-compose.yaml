@@ -34,3 +34,19 @@ services:
       - JWT_SECRET=nRuDMYTAZC8muFz4
       - MARVEL_PUBLIC_KEY=${MARVEL_PUBLIC_KEY}
       - MARVEL_PRIVATE_KEY=${MARVEL_PRIVATE_KEY}
+
+  comics-service:
+    image: yisusyaro/comics-service:1
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    container_name: comics-container
+    ports:
+      - '5002:5002'
+    environment:
+      - START=start_comics
+      - FRONTEND=http://127.0.0.1:5500
+      - ENV=production
+      - JWT_SECRET=nRuDMYTAZC8muFz4
+      - MARVEL_PUBLIC_KEY=${MARVEL_PUBLIC_KEY}
+      - MARVEL_PRIVATE_KEY=${MARVEL_PRIVATE_KEY}

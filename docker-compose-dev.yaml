@@ -36,3 +36,20 @@ services:
       - JWT_SECRET=nRuDMYTAZC8muFz4
       - MARVEL_PUBLIC_KEY=${MARVEL_PUBLIC_KEY}
       - MARVEL_PRIVATE_KEY=${MARVEL_PRIVATE_KEY}
+
+  comics-service:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile-dev
+    container_name: comics-container
+    volumes:
+      - ./server/:/usr/src/app
+    ports:
+      - '5002:5002'
+    stdin_open: true
+    environment:
+      - FRONTEND=http://127.0.0.1:5500
+      - ENV=test
+      - JWT_SECRET=nRuDMYTAZC8muFz4
+      - MARVEL_PUBLIC_KEY=${MARVEL_PUBLIC_KEY}
+      - MARVEL_PRIVATE_KEY=${MARVEL_PRIVATE_KEY}
