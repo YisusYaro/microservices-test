@@ -2,10 +2,10 @@
 
 Microservices coppel test.
 
-Please provide os variables environtment
+Please provide os variables environment using the following file
 
 ```
-/docker-compose.yaml
+./docker-compose.yaml
 ```
 
 ## Deployment
@@ -29,7 +29,9 @@ pipenv run start
 docker-compose -f docker-compose-dev.yaml build
 docker-compose -f docker-compose-dev.yaml up -d
 
-docker exec -it server-container pipenv run start
+docker exec -it users-container pipenv run start_users
+docker exec -it characters-container pipenv run start_characters
+docker exec -it comics-container pipenv run start_comics
 ```
 
 ## Open your browser 🚀
