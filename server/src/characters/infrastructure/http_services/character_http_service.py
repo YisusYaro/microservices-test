@@ -3,7 +3,7 @@ from datetime import datetime
 from hashlib import md5
 
 import requests
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from characters.domain.factory import Factory
 
 

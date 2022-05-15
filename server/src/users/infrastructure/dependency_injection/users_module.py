@@ -33,13 +33,13 @@ def set_application(container):
     set_events(container)
 
 
-def set_infraestructure(container):
-    from users.infraestructure.repositories.user_respository import UserRepository
+def set_infrastructure(container):
+    from users.infrastructure.repositories.user_respository import UserRepository
     container.UserRepository = providers.Singleton(
         UserRepository,
     )
 
-    from users.infraestructure.tokens.user_token_service import UserTokenService
+    from users.infrastructure.tokens.user_token_service import UserTokenService
     container.UserTokenService = providers.Factory(
         UserTokenService,
     )
@@ -53,6 +53,6 @@ def set_interface(container):
 
 
 def set_users_module(container):
-    set_infraestructure(container)
+    set_infrastructure(container)
     set_interface(container)
     set_application(container)

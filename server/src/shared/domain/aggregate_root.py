@@ -1,4 +1,4 @@
-from shared.infraestructure.dependency_injection import app
+from shared.infrastructure.dependency_injection import app
 
 
 class AggregateRoot(object):

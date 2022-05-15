@@ -1,8 +1,8 @@
 from users.application.queries.user_login_result import UserLoginResult
-from users.infraestructure.repositories.user_respository import \
+from users.infrastructure.repositories.user_respository import \
     UserRepository
-from users.infraestructure.tokens.user_token_service import UserTokenService
-from shared.infraestructure.dependency_injection.app import App
+from users.infrastructure.tokens.user_token_service import UserTokenService
+from shared.infrastructure.dependency_injection.app import App
 from shared.domain.exceptions.unauthorized import UnauthorizedException
 from users.domain.errors.error import ErrorMessage
 

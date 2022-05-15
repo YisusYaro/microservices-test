@@ -1,7 +1,7 @@
 from functools import wraps
 from re import A
 from flask import Blueprint, request
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from shared.interface.handle_http_error import handle_http_error
 
 from users.application.commands.register_user_command import RegisterUserCommand

@@ -3,7 +3,7 @@ import json
 from characters.application.queries.list_characters_by_criteria_query import \
     ListCharactersByCriteriaQuery
 from flask import Blueprint, request
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from shared.interface.handle_http_error import handle_http_error
 
 characters_controller = Blueprint("characters_controller", __name__)

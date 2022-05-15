@@ -1,5 +1,5 @@
-from users.infraestructure.repositories.user_respository import UserRepository
-from shared.infraestructure.dependency_injection.app import App
+from users.infrastructure.repositories.user_respository import UserRepository
+from shared.infrastructure.dependency_injection.app import App
 from users.domain.factory import Factory
 
 class RegisterUserHandler(object):

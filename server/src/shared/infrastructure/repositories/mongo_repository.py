@@ -1,4 +1,4 @@
-from shared.infraestructure.repositories.mongo_client_factory import MongoClientFactory
+from shared.infrastructure.repositories.mongo_client_factory import MongoClientFactory
 
 
 class MongoRepository(object):

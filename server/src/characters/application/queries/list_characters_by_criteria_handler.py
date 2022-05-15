@@ -1,5 +1,5 @@
-from shared.infraestructure.dependency_injection.app import App
-from characters.infraestructure.http_services.character_http_service import CharacterHttpService
+from shared.infrastructure.dependency_injection.app import App
+from characters.infrastructure.http_services.character_http_service import CharacterHttpService
 from characters.application.queries.list_characters_by_criteria_result import ListCharactersByCriteriaResult
 
 

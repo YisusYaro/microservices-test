@@ -4,7 +4,7 @@ from hashlib import md5
 from unittest import result
 
 import requests
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from comics.domain.factory import Factory
 
 

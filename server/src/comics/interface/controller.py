@@ -3,7 +3,7 @@ import json
 from comics.application.queries.list_comics_by_criteria_query import \
     ListComicsByCriteriaQuery
 from flask import Blueprint, request
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from shared.interface.handle_http_error import handle_http_error
 
 comics_controller = Blueprint("comics_controller", __name__)

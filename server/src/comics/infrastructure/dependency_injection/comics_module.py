@@ -12,13 +12,13 @@ def set_application(container):
     set_queries(container)
 
 
-def set_infraestructure(container):
-    from comics.infraestructure.http_services.comic_http_service import ComicHttpService
+def set_infrastructure(container):
+    from comics.infrastructure.http_services.comic_http_service import ComicHttpService
     container.ComicHttpService = providers.Factory(
         ComicHttpService
     )
 
 
 def set_comics_module(container):
-    set_infraestructure(container)
+    set_infrastructure(container)
     set_application(container)

@@ -1,5 +1,5 @@
 from dependency_injector import containers, providers
-from shared.infraestructure.tokens.token_service import TokenService
+from shared.infrastructure.tokens.token_service import TokenService
 
 from ..command_bus.command_bus import CommandBus
 from ..event_bus.event_bus import EventBus

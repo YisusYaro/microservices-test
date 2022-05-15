@@ -4,7 +4,7 @@ import flask
 from waitress import serve
 
 from app_controller import app_controller
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from users.interface.controller import users_controller
 
 app = flask.Flask(__name__)

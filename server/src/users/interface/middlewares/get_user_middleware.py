@@ -1,7 +1,7 @@
 from functools import wraps
 from flask import request
 
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 
 
 def get_user_middleware(f):

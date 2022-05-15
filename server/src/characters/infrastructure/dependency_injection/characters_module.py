@@ -12,13 +12,13 @@ def set_application(container):
     set_queries(container)
 
 
-def set_infraestructure(container):
-    from characters.infraestructure.http_services.character_http_service import CharacterHttpService
+def set_infrastructure(container):
+    from characters.infrastructure.http_services.character_http_service import CharacterHttpService
     container.CharacterHttpService = providers.Factory(
         CharacterHttpService
     )
 
 
 def set_characters_module(container):
-    set_infraestructure(container)
+    set_infrastructure(container)
     set_application(container)

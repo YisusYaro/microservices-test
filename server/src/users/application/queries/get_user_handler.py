@@ -1,8 +1,8 @@
-from shared.infraestructure.dependency_injection.app import App
+from shared.infrastructure.dependency_injection.app import App
 from users.application.queries.get_user_result import GetUserResult
 from users.domain.errors.error import ErrorMessage
-from users.infraestructure.repositories.user_respository import UserRepository
-from users.infraestructure.tokens.user_token_service import UserTokenService
+from users.infrastructure.repositories.user_respository import UserRepository
+from users.infrastructure.tokens.user_token_service import UserTokenService
 from shared.domain.exceptions.bad_request import BadRequestException
 
 

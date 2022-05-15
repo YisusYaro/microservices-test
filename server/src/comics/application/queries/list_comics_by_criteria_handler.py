@@ -1,5 +1,5 @@
-from shared.infraestructure.dependency_injection.app import App
-from comics.infraestructure.http_services.comic_http_service import ComicHttpService
+from shared.infrastructure.dependency_injection.app import App
+from comics.infrastructure.http_services.comic_http_service import ComicHttpService
 from comics.application.queries.list_comics_by_criteria_result import ListComicsByCriteriaResult
 
 

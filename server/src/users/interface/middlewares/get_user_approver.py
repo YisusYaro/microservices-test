@@ -1,6 +1,6 @@
 from shared.domain.exceptions.forbbiden import ForbbidenException
-from shared.infraestructure.dependency_injection.app import App
-from shared.infraestructure.tokens.token_service import TokenService
+from shared.infrastructure.dependency_injection.app import App
+from shared.infrastructure.tokens.token_service import TokenService
 
 
 class GetUserApprover(object):

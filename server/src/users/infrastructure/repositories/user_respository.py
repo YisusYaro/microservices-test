@@ -1,5 +1,5 @@
 import ulid
-from shared.infraestructure.repositories.mongo_repository import \
+from shared.infrastructure.repositories.mongo_repository import \
     MongoRepository
 from users.domain.factory import Factory
 

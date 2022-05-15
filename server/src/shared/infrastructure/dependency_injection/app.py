@@ -1,8 +1,8 @@
 from ..data_structures.singleton import Singleton
 from .container import Container
-from users.infraestructure.dependency_injection.users_module import set_users_module
-from characters.infraestructure.dependency_injection.characters_module import set_characters_module
-from comics.infraestructure.dependency_injection.comics_module import set_comics_module
+from users.infrastructure.dependency_injection.users_module import set_users_module
+from characters.infrastructure.dependency_injection.characters_module import set_characters_module
+from comics.infrastructure.dependency_injection.comics_module import set_comics_module
 
 
 class App(object, metaclass=Singleton):
