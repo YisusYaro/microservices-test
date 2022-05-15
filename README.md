@@ -20,7 +20,9 @@ docker-compose up -d
 ```
 cd server
 pipenv install
-pipenv run start
+pipenv run start_users
+pipenv run start_characters
+pipenv run start_comics
 ```
 
 ## Dev enviroment using docker 🐋
